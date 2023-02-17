@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: #032f61;/* hsl(71, 100%, 76%);*/
+  --secondary-color: #a9c9e9 /*hsl(160, 93%, 34%)*/ ;
+  --tertiary-color: #2c4c71; /*hsl(175, 100%, 66%)*/
+  --accent-color: #446285 /*hsl(177, 83%, 39%)*/;
+  --text-color: #ffffff /*hsl(295, 56%, 42%)*/;
+  --error-color: #5c6468 /*hsl(9, 45%, 50%)*/;
+  --field-color: hsl(210, 43%, 56%);
+  --overlay-color: hsla(221, 40%, 12%, 0.75);
+
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(209, 18%, 43%);
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+
+  --font-family: "Work Sans", sans-serif;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-regular);
+}
+
+body {
+  background: var(--primary-color);
+}
+
+input,
+textarea,
+fieldset {
+  font-family: inherit;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* Removes the arrows in the number field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--field-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tertiary-color);
+}
