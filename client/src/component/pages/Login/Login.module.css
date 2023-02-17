@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 16px;
+  width: 95%;
+  max-width: 1024px;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  background: var(--accent-color);
+  overflow: hidden;
+}
+
+.img {
+  grid-column: span 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  grid-column: span 3;
+  padding: 3.5em;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle {
+  margin-top: 1em;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.form {
+  margin-top: 2em;
+  width: 100%;
+  max-width: 356px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form > button[type="submit"] {
+  margin-top: 3em;
+}
