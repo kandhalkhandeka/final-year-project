@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+
+  padding: 1.75em;
+  width: 100%;
+  border-radius: 16px;
+
+  background: var(--bg-color);
+  color: var(--tertiary-font-color);
+  transition: filter 125ms ease-in, transform 125ms ease-in, background 250ms ease, color 250ms ease;
+}
+
+.container,
+.container.disabled:active {
+  --bg-color: var(--accent-color);
+  --primary-font-color: var(--secondary-color);
+  --secondary-font-color: var(--white);
+  --tertiary-font-color: var(--text-color);
+  --unavailable-font-color: var(--error-color);
+  --available-font-color: var(--tertiary-color);
+}
+
+.container:active,
+.container.isSelected {
+  --bg-color: var(--secondary-color);
+  --primary-font-color: var(--primary-color);
+  --secondary-font-color: var(--primary-color);
+  --tertiary-font-color: var(--primary-color);
+  --unavailable-font-color: var(--primary-color);
+  --available-font-color: var(--primary-color);
+}
+
+.container:hover {
+  filter: brightness(1.15);
+  cursor: pointer;
+}
+
+.container:active {
+  transform: translateY(4px);
+}
+
+.container.disabled:hover {
+  filter: none;
+  cursor: auto;
+}
+
+.container.disabled:active {
+  transform: none;
+}
+
+.container.isSelected:hover {
+  filter: none;
+}
+
+.img {
+  border-radius: 12px;
+  width: 17.5%;
+  aspect-ratio: 16 / 11;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1em 0;
+}
+
+.name {
+  color: var(--primary-font-color);
+  font-weight: var(--font-regular);
+  font-size: 2rem;
+}
+
+.category {
+  display: inline-flex;
+  gap: 36px;
+  align-items: center;
+  margin-top: 0.5em;
+
+  font-size: 0.9rem;
+}
+
+.category span {
+  color: var(--secondary-font-color);
+  font-size: 1.5rem;
+}
+
+.description {
+  flex: 1;
+  font-size: 1.25rem;
+  margin-top: 2.5em;
+}
+
+.side-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15%;
+}
+
+.side-detail {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.side-detail span {
+  color: var(--secondary-font-color);
+  font-size: 1.5rem;
+}
+
+.side-detail span.unavailable {
+  color: var(--unavailable-font-color);
+}
+
+.side-detail span.available {
+  color: var(--available-font-color);
+}

@@ -1,0 +1,13 @@
+{
+  "jwt": {
+    "issuer": "pan-server.vercel.app/api",
+    "audience": "pan-server.vercel.app",
+    "expiresIn": {
+      "access": "15m",
+      "refresh": "2h"
+    }
+  },
+  "client": {
+    "url": "https://pan-laplace.vercel.app/"
+  }
+}
