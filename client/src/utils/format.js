@@ -1,7 +1,7 @@
 function currency(currency) {
   return new Intl.NumberFormat("en-PH", {
     style: "currency",
-    currency: "PHP",
+    currency: "INR",
     currencyDisplay: "code",
     maximumFractionDigits: 2,
   }).format(currency);
