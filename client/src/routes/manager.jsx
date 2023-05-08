@@ -2,7 +2,7 @@ import { BiNotepad } from "react-icons/bi";
 import { BsBoxSeam, BsPeople } from "react-icons/bs";
 import { FiHome, FiTruck } from "react-icons/fi";
 
-// import Employee from "@components/pages/Employee";
+import Employee from "@components/pages/Employee";
 import Order from "@components/pages/Order";
 import Product from "@components/pages/Product";
 import Report from "@components/pages/Report";
@@ -30,7 +30,7 @@ const managerPages = [
           { title: "Inventory Report", onDownload: downloadInventoryReport },
           { title: "Sales Report", onDownload: downloadSalesReport },
           { title: "Supplier Report", onDownload: downloadSupplierStocksReport },
-          // { title: "Employee Details", onDownload: downloadEmployeeReport, isItem: true },
+          { title: "Employee Details", onDownload: downloadEmployeeReport, isItem: true },
           { title: "Daily Sales Report", onDownload: downloadDailySalesReport, isItem: true },
         ]}
       />
@@ -59,13 +59,13 @@ const managerPages = [
     element: <Supplier showStockDeleteButton showSupplierAddButton showSupplierEditButton />,
     navLink: true,
   },
-  // {
-  //   path: "/employees",
-  //   label: "Employees",
-  //   icon: <BsPeople />,
-  //   element: <Employee />,
-  //   navLink: true,
-  // },
+  {
+    path: "/employees",
+    label: "Employees",
+    icon: <BsPeople />,
+    element: <Employee />,
+    navLink: true,
+  },
 ];
 
 export default {
